@@ -1,21 +1,18 @@
 # Configuration d'un serveur DNS linux 
 
-Installer les paquets bind9
-```
-sudo apt install bind9 bind9utils bind9-doc -y
-```  
+Installer les paquets bind9  
+`sudo apt install bind9 bind9utils bind9-doc -y`  
 
-Configurer le fichier de définition des zones
-```
-sudo nano /etc/bind/named.conf.local   
-```    
+Configurer le fichier de définition des zones :  
+`sudo nano /etc/bind/named.conf.local`  
+
 ![zone](./DNSCONF3.png)  
 
 Créer es fichiers de zone forward et reverse, puis les configurer :   
-`sudo nano /etc/bind/forward.wilders.lan`
+`sudo nano /etc/bind/forward.wilders.lan`  
 `sudo nano /etc/bind/reverse.wilders.lan`  
 
-![zones2](./DNSCONF2.png)
+![zones2](./DNSCONF2.png)  
 
 
 Vérifier si il n'y a pas de retour d'erreur sur bind9 :  
@@ -24,13 +21,13 @@ Vérifier si il n'y a pas de retour d'erreur sur bind9 :
 ![test](./DNSecho0.png)  
 
 Vérifier les fichiers forward et reverse:  
-`sudo named-checkzone wilders.lan /etc/bind/forward.wilders.lan`
+`sudo named-checkzone wilders.lan /etc/bind/forward.wilders.lan`  
 `sudo named-checkzone wilders.lan /etc/bind/reverse.wilders.lan`  
 
 ![test](./DNScheckzone.png)  
 
 Redémarrer bind et vérifier que le service fonctionne :  
-`sudo systemctl restart bind9`
+`sudo systemctl restart bind9`  
 `sudo systemctl status bind9`  
 
 ![Status](./DNSCONF.png)    
