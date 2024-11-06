@@ -18,7 +18,7 @@ Créer es fichiers de zone forward et reverse, puis les configurer :
 ![zones2](./DNSCONF2.png)
 
 
-Vérifier si il n'y a pas de retour d'erreur sur bind9 :
+Vérifier si il n'y a pas de retour d'erreur sur bind9 :  
 `sudo named-checkconf`  
 
 ![test](./DNSecho0.png)  
@@ -29,7 +29,7 @@ Vérifier les fichiers forward et reverse:
 
 ![test](./DNScheckzone.png)  
 
-Redémarrer bind et vérifier que le service fonctionne
+Redémarrer bind et vérifier que le service fonctionne :  
 `sudo systemctl restart bind9`
 `sudo systemctl status bind9`  
 
