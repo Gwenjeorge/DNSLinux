@@ -38,10 +38,10 @@ Redémarrer bind et vérifier que le service fonctionne :
 
 Test sur le client :  
 
-nslookup  
+  
 ![Test1](./DNS3.png)  
 
-dig  
+  
 ![Test2](./DNS4.png)  
 
 
